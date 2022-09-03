@@ -30,69 +30,91 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btnSelectFile = new System.Windows.Forms.Button();
+            this.ficheiro = new System.Windows.Forms.TextBox();
+            this.cifrar = new System.Windows.Forms.Button();
+            this.logo = new System.Windows.Forms.PictureBox();
+            this.password = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // button1
+            // btnSelectFile
             // 
-            this.button1.Location = new System.Drawing.Point(12, 189);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Selecciona ficheiro";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSelectFile.Location = new System.Drawing.Point(12, 189);
+            this.btnSelectFile.Name = "btnSelectFile";
+            this.btnSelectFile.Size = new System.Drawing.Size(132, 23);
+            this.btnSelectFile.TabIndex = 1;
+            this.btnSelectFile.Text = "Selecciona ficheiro";
+            this.btnSelectFile.UseVisualStyleBackColor = true;
+            this.btnSelectFile.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // ficheiro
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 231);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(208, 23);
-            this.textBox1.TabIndex = 2;
+            this.ficheiro.Location = new System.Drawing.Point(12, 218);
+            this.ficheiro.Name = "ficheiro";
+            this.ficheiro.ReadOnly = true;
+            this.ficheiro.Size = new System.Drawing.Size(306, 23);
+            this.ficheiro.TabIndex = 2;
             // 
-            // button2
+            // cifrar
             // 
-            this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(243, 231);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Cifrar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.cifrar.Enabled = false;
+            this.cifrar.Location = new System.Drawing.Point(243, 258);
+            this.cifrar.Name = "cifrar";
+            this.cifrar.Size = new System.Drawing.Size(75, 23);
+            this.cifrar.TabIndex = 3;
+            this.cifrar.Text = "Cifrar";
+            this.cifrar.UseVisualStyleBackColor = true;
+            this.cifrar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // pictureBox1
+            // logo
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(306, 158);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
+            this.logo.Location = new System.Drawing.Point(12, 15);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(306, 158);
+            this.logo.TabIndex = 4;
+            this.logo.TabStop = false;
+            // 
+            // password
+            // 
+            this.password.Enabled = false;
+            this.password.Location = new System.Drawing.Point(88, 259);
+            this.password.Name = "password";
+            this.password.ReadOnly = true;
+            this.password.Size = new System.Drawing.Size(149, 23);
+            this.password.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 262);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 15);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Contrasinal";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(329, 267);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(328, 296);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.password);
+            this.Controls.Add(this.logo);
+            this.Controls.Add(this.cifrar);
+            this.Controls.Add(this.ficheiro);
+            this.Controls.Add(this.btnSelectFile);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "CIG Correos - Cifrado clases";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -100,9 +122,11 @@
 
         #endregion
         private OpenFileDialog openFileDialog1;
-        private Button button1;
-        private TextBox textBox1;
-        private Button button2;
-        private PictureBox pictureBox1;
+        private Button btnSelectFile;
+        private TextBox ficheiro;
+        private Button cifrar;
+        private PictureBox logo;
+        private TextBox password;
+        private Label label1;
     }
 }
