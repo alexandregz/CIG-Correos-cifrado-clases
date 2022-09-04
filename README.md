@@ -13,6 +13,9 @@ Xenera un .zip cifrado dun ficheiro .mp4 indicado.
 - Cifrar
 
 
+![Screenshot de app CIG Correos para cifrar ficheiros](cigcorreos_screenshot.png "CIG Correos - App cifrar clases")
+
+
 ## Librarías
 
 Emprega https://github.com/icsharpcode/SharpZipLib para comprimir e cifrar ficheiros
