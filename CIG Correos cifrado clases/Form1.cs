@@ -112,7 +112,9 @@ namespace CIG_Correos_cifrado_clases
                 {
                     logger.Info("escribindo ficheiro");
 
-                    var entry = new ZipEntry(Path.GetFileName(filename));
+                    var entry = new ZipEntry(Path.GetFileName(ficheiro.Text));
+                    logger.Info("entry: {entry}", entry);
+
                     zipStream.PutNextEntry(entry);
                     //itemStream.CopyTo(zipStream); // todo o read() de buffer sobra empregando so isto
 
