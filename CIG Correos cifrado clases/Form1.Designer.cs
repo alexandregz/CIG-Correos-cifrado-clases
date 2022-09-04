@@ -37,6 +37,7 @@
             this.password = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +53,7 @@
             this.btnSelectFile.TabIndex = 1;
             this.btnSelectFile.Text = "Selecciona ficheiro";
             this.btnSelectFile.UseVisualStyleBackColor = true;
-            this.btnSelectFile.Click += new System.EventHandler(this.button1_Click);
+            this.btnSelectFile.Click += new System.EventHandler(this.btnSelectFile_Click);
             // 
             // ficheiro
             // 
@@ -71,7 +72,7 @@
             this.cifrar.TabIndex = 3;
             this.cifrar.Text = "Cifrar";
             this.cifrar.UseVisualStyleBackColor = true;
-            this.cifrar.Click += new System.EventHandler(this.button2_Click);
+            this.cifrar.Click += new System.EventHandler(this.cifrar_Click);
             // 
             // logo
             // 
@@ -139,5 +140,6 @@
         private TextBox password;
         private Label label1;
         private ProgressBar progressBar1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
