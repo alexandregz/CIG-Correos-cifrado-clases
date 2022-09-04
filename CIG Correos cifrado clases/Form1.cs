@@ -16,13 +16,6 @@ namespace CIG_Correos_cifrado_clases
             backgroundWorker1.RunWorkerCompleted += new RunWorkerCompletedEventHandler(backgroundWorker1_RunWorkerCompleted);
             backgroundWorker1.ProgressChanged += new ProgressChangedEventHandler(backgroundWorker1_ProgressChanged);
             backgroundWorker1.WorkerReportsProgress = true;
-
-            //// Log, para ter um .exe e nom depender do nlog.config creo programaticamente aqui
-            //// @Todo revisar para quitar a clase propia
-            //NLog.LogManager.Setup().LoadConfiguration(builder => {
-            //    //builder.ForLogger().FilterMinLevel(LogLevel.Debug).WriteToFile(fileName: "${currentdir}/cigcorreos.txt");
-            //    //builder.ForLogger().FilterMinLevel(LogLevel.Info).WriteToFile(fileName: "${currentdir}/cigcorreos.txt");
-            //});
             
             logger = NLog.LogManager.GetCurrentClassLogger();
         }
