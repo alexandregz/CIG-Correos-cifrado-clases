@@ -188,6 +188,12 @@ namespace CIG_Correos_cifrado_clases
                 if(result != DialogResult.OK)
                 {
                     logger.Info("Non se deu a OK para cifrar sem password!. Saindo do programa.");
+
+                    ficheiro.Text = "";
+                    password.Text = "";
+
+                    btnSelectFile.Enabled = true;
+
                     return;
                 }
             }
