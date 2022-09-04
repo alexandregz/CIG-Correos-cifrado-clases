@@ -91,8 +91,6 @@ namespace CIG_Correos_cifrado_clases
                 const int BufferSize = 8192;
                 byte[] buffer = new byte[BufferSize];
 
-                List<int> listSleep = new List<int>();
-
                 // aqui abro o ficheiro orixinal para ir lendo (se queda flipado meter um buffer?)
                 using (var itemStream = new FileStream(ficheiro.Text, FileMode.Open, FileAccess.Read, FileShare.Read))
                 {
