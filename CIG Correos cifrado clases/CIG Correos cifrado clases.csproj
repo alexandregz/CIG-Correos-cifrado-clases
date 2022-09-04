@@ -8,6 +8,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>logo_center.ico</ApplicationIcon>
+    <StartupObject>CIG_Correos_cifrado_clases.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
