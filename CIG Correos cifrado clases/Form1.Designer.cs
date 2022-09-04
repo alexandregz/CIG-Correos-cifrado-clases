@@ -36,6 +36,7 @@
             this.logo = new System.Windows.Forms.PictureBox();
             this.password = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,11 +100,20 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Contrasinal";
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(-1, 300);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(332, 11);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.progressBar1.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(328, 296);
+            this.ClientSize = new System.Drawing.Size(330, 309);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.password);
             this.Controls.Add(this.logo);
@@ -128,5 +138,6 @@
         private PictureBox logo;
         private TextBox password;
         private Label label1;
+        private ProgressBar progressBar1;
     }
 }

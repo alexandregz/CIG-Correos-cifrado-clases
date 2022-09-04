@@ -1,3 +1,5 @@
+using NLog;
+
 namespace CIG_Correos_cifrado_clases
 {
     internal static class Program
