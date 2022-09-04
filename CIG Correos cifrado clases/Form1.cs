@@ -17,12 +17,12 @@ namespace CIG_Correos_cifrado_clases
             backgroundWorker1.ProgressChanged += new ProgressChangedEventHandler(backgroundWorker1_ProgressChanged);
             backgroundWorker1.WorkerReportsProgress = true;
 
-            // Log, para ter um .exe e nom depender do nlog.config creo programaticamente aqui
-            // @Todo revisar para quitar a clase propia
-            NLog.LogManager.Setup().LoadConfiguration(builder => {
-                //builder.ForLogger().FilterMinLevel(LogLevel.Debug).WriteToFile(fileName: "${currentdir}/cigcorreos.txt");
-                builder.ForLogger().FilterMinLevel(LogLevel.Info).WriteToFile(fileName: "${currentdir}/cigcorreos.txt");
-            });
+            //// Log, para ter um .exe e nom depender do nlog.config creo programaticamente aqui
+            //// @Todo revisar para quitar a clase propia
+            //NLog.LogManager.Setup().LoadConfiguration(builder => {
+            //    //builder.ForLogger().FilterMinLevel(LogLevel.Debug).WriteToFile(fileName: "${currentdir}/cigcorreos.txt");
+            //    //builder.ForLogger().FilterMinLevel(LogLevel.Info).WriteToFile(fileName: "${currentdir}/cigcorreos.txt");
+            //});
             
             logger = NLog.LogManager.GetCurrentClassLogger();
         }
@@ -109,7 +109,7 @@ namespace CIG_Correos_cifrado_clases
                     logger.Info("entry: {entry}", entry);
 
                     zipStream.PutNextEntry(entry);
-                    //itemStream.CopyTo(zipStream); // todo o read() de buffer sobra empregando so isto
+                    //itemStream.CopyTo(zipStream); // todo o read() de buffer sobra empregando so isto, so teria que calcular o porcentagem da progressBar
 
 
                     int read;
@@ -127,20 +127,10 @@ namespace CIG_Correos_cifrado_clases
                             logger.Debug("Forzamos tantoPorCientoProgressbar a 100 para que nom dea umha exception");
                             tantoPorCientoProgressbar = 100;
                         }
-                        //progressBar1.Value = tantoPorCientoProgressbar;
 
                         worker.ReportProgress(tantoPorCientoProgressbar);
 
                         zipStream.Write(buffer, 0, read);
-
-                        //// em probas numha imagem de virtualbox queda cum "Not responding", ainda que finaliza bem.
-                        //// Dou um sleep cada 10% para que "respire"
-                        //if (tantoPorCientoProgressbar % 10 == 0 && tantoPorCientoProgressbar > 0 && listSleep.IndexOf(tantoPorCientoProgressbar) == -1)
-                        //{
-                        //    logger.Info("Sleep de {sleep} por estar en {tantoPorCientoProgressbar}", 100, tantoPorCientoProgressbar);
-                        //    Thread.Sleep(1000);
-                        //    listSleep.Add(tantoPorCientoProgressbar);
-                        //}
                     }
 
                 }
