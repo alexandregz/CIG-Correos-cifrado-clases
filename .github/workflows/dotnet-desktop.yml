@@ -19,6 +19,9 @@ jobs:
 
     env:
       Solution_Name: CIG Correos.sln                         # Replace with your solution name, i.e. MyWpfApp.sln.
+      Wpf_Project_Path: CIG Correos cifrado clases\CIG Correos cifrado clases.csproj
+      Wap_Project_Directory: CIG Correos.Package
+      Wap_Project_Name: CIG Correos.Package.wapproj      
 
     steps:
     - name: Checkout
