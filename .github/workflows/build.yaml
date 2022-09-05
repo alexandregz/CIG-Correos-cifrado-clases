@@ -61,4 +61,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: CIG Correos cifrados clases.exe
-        path: ${{ env.Wap_Project_Path }}/*.exe
+        path: bin/${{ matrix.configuration }}/${{ env.TargetFramework }}/${{ matrix.runtime }}/publish/*
