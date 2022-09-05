@@ -57,10 +57,10 @@ jobs:
       run: dotnet restore
 
     - name: Build
-      run: dotnet publish --runtime ${{ matrix.runtime }} -p:PublishSingleFile=true --self-contained true -c ${{ matrix.configuration }} --no-restore
+      run: dotnet publish --runtime ${{ matrix.runtime }} -p:PublishSingleFile=true --self-contained true -c ${{ matrix.configuration }} --no-restore --output upload/
 
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: CIG Correos cifrados clases.exe
-        path: ./bin/${{ matrix.configuration }}/${{ matrix.framework }}/${{ matrix.runtime }}/publish/*
+        name: CIG Correos.exe
+        path: upload/**
