@@ -1,5 +1,8 @@
 # CIG Correos cifrado clases
 
+[![Build](https://github.com/alexandregz/CIG-Correos-cifrado-clases/actions/workflows/build.yaml/badge.svg?branch=master)](https://github.com/alexandregz/CIG-Correos-cifrado-clases/actions/workflows/build.yaml)
+
+
 App para cifrar ficheiros.
 
 Empregado na formación dada por CIG Correos.
