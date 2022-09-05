@@ -72,4 +72,4 @@ jobs:
         prerelease: false
         title: "Última versión"
         files: |
-            *.exe
+            *
