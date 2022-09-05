@@ -29,7 +29,6 @@ jobs:
       matrix:
         configuration: [Release]
         runtime: [win-x86]
-        framework: [net6.0-windows]
 
 
     name: Build 
@@ -62,9 +61,15 @@ jobs:
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: CIG Correos.exe
+        name: CIG Correos
         path: upload/*.exe
 
-    - name: Release
-      uses: softprops/action-gh-release@v1
-      if: startsWith(github.ref, 'refs/tags/')
+    - name: Crea release
+      uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "latest"
+        prerelease: false
+        title: "Última versión"
+        files: |
+            *.exe
