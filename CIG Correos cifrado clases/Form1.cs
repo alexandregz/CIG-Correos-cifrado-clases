@@ -38,7 +38,7 @@ namespace CIG_Correos_cifrado_clases
             }
             else if (e.Error != null)
             {
-                MessageBox.Show("Se ha producido un error al cifrar " + filename +": " + e.Error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Produciuse un erro ao cifrar " + filename +": " + e.Error.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -91,7 +91,7 @@ namespace CIG_Correos_cifrado_clases
                 const int BufferSize = 8192;
                 byte[] buffer = new byte[BufferSize];
 
-                // aqui abro o ficheiro orixinal para ir lendo (se queda flipado meter um buffer?)
+                // aqui abro o ficheiro orixinal para ir lendo
                 using (var itemStream = new FileStream(ficheiro.Text, FileMode.Open, FileAccess.Read, FileShare.Read))
                 {
                     logger.Info("escribindo ficheiro");
