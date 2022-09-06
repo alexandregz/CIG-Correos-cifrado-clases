@@ -28,7 +28,7 @@ jobs:
     strategy:
       matrix:
         configuration: [Release]
-        runtime: [win-x86]
+        runtime: [win-x64]
 
 
     name: Build 
